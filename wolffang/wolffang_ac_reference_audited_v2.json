@@ -1,0 +1,1233 @@
+{
+  "schema_version": "2.0.0-audited",
+  "scope": "日本国内アーケード版『ウルフファング 空牙2001』。家庭用移植版・PLUS特殊アクションは除外。",
+  "as_of": "2026-10-21",
+  "sources": {
+    "game_instruction": "https://w.atwiki.jp/rohga/pages/14.html",
+    "parts_table": "https://w.atwiki.jp/rohga/pages/24.html",
+    "machine_table": "https://w.atwiki.jp/rohga/pages/26.html",
+    "tactics": "https://w.atwiki.jp/rohga/pages/47.html",
+    "catalog": "https://w.atwiki.jp/gcmatome/pages/3176.html",
+    "aniwota": "https://w.atwiki.jp/aniwotawiki/pages/8014.html",
+    "player_article": "https://note.com/eureka_db/n/n0124f6e571d9",
+    "supplement": "https://w.atwiki.jp/rohga/pages/37.html",
+    "manufacturer_history": "https://www.hamster.co.jp/release/7461/",
+    "historical_review": "https://igcc.jp/%E3%82%A6%E3%83%AB%E3%83%95%E3%83%95%E3%82%A1%E3%83%B3%E3%82%B0/"
+  },
+  "parts": {
+    "BODY": [
+      {
+        "code": "HM",
+        "name": "ホーミングミサイル",
+        "attack": "自機上方・前方に発射する誘導弾群（後方誘導が弱い）",
+        "level_changes": [
+          "3発×3連射",
+          "5発×3連射",
+          "7発×3連射"
+        ],
+        "strengths": [
+          "広範囲・遠距離への追尾",
+          "大型標的に接近しての集中命中も可能"
+        ],
+        "limitations": [
+          "追尾性能は完全ではない",
+          "背後への誘導は弱い"
+        ],
+        "mechanic_traits": [
+          "追尾",
+          "複数対象",
+          "集中命中"
+        ],
+        "evidence": [
+          "parts_table",
+          "catalog",
+          "aniwota"
+        ],
+        "official_code": "H-MISSILE",
+        "assertions": {
+          "mechanism": "B",
+          "level_changes": "C",
+          "exact_charge_speed": "D"
+        },
+        "evidence_kind": "非公式攻略資料の照合／インストカード等による構造確認。AC実機測定未実施"
+      },
+      {
+        "code": "EL",
+        "name": "エレクトリッガー",
+        "attack": "自機中心に高電圧フィールドを展開し敵にダメージ／一部の弾を消去",
+        "level_changes": [
+          "半径約1機分",
+          "半径約2.5機分",
+          "画面ほぼ全体"
+        ],
+        "strengths": [
+          "通常弾消去",
+          "広い範囲の安全確保"
+        ],
+        "limitations": [
+          "攻撃力は低い",
+          "無敵ではない・一部弾は消去できない"
+        ],
+        "mechanic_traits": [
+          "迎撃",
+          "安全性",
+          "区域防御"
+        ],
+        "evidence": [
+          "parts_table",
+          "catalog",
+          "player_article"
+        ],
+        "official_code": "ELECTRIGER",
+        "assertions": {
+          "mechanism": "B",
+          "range_by_level": "C",
+          "exact_charge_speed": "D",
+          "enemy_bullet_erasure_limits": "C"
+        },
+        "evidence_kind": "非公式攻略資料の照合／インストカード等による構造確認。AC実機測定未実施"
+      },
+      {
+        "code": "FL",
+        "name": "フレイムランチャー",
+        "attack": "真上に火弾/装置を上げ、展開後に頭上から火の雨が落ちる。前方火炎放射ではない。",
+        "level_changes": [
+          "3発（Wiki記載）",
+          "5発（Wiki記載）",
+          "7発（Wiki記載）"
+        ],
+        "strengths": [
+          "通常射撃の届きにくい頭上を攻撃",
+          "持続する落下火炎",
+          "敵出現の先読みと相性がよい"
+        ],
+        "limitations": [
+          "上空で展開するまで時間差がある",
+          "水平射程は短い",
+          "通常弾を消す電磁バリアと同等と扱わない"
+        ],
+        "mechanic_traits": [
+          "設置的",
+          "先読み",
+          "上方迎撃"
+        ],
+        "evidence": [
+          "parts_table",
+          "catalog",
+          "player_article"
+        ],
+        "official_code": "FLAME-L",
+        "assertions": {
+          "mechanism": "B",
+          "level_projectile_count": "C",
+          "damage_per_hit": "D"
+        },
+        "evidence_kind": "非公式攻略資料の照合／インストカード等による構造確認。AC実機測定未実施"
+      },
+      {
+        "code": "GL",
+        "name": "グレネードランチャー",
+        "attack": "前後両側に放物線で榴弾を発射。敵直撃時に爆発、地面着弾時に火柱（攻撃判定）。",
+        "level_changes": [
+          "前後各1発＝合計2発",
+          "前後各2発＝合計4発",
+          "前後各3発＝合計6発"
+        ],
+        "strengths": [
+          "近距離の大型敵に集中命中で高火力",
+          "着地火柱にも攻撃判定"
+        ],
+        "limitations": [
+          "横方向の飛距離が短い",
+          "地面の火柱は高空まで届かない",
+          "サブウェポンの中では長いチャージ"
+        ],
+        "mechanic_traits": [
+          "着弾位置",
+          "距離調整",
+          "集中火力"
+        ],
+        "evidence": [
+          "parts_table",
+          "catalog",
+          "player_article",
+          "aniwota"
+        ],
+        "official_code": "GRENADE-L",
+        "assertions": {
+          "mechanism": "B",
+          "projectile_count": "B",
+          "ground_flame_relative_damage": "C"
+        },
+        "evidence_kind": "非公式攻略資料の照合／インストカード等による構造確認。AC実機測定未実施"
+      }
+    ],
+    "ARM": [
+      {
+        "code": "NS",
+        "alias": "KS（機体一覧に使用された略号）／NS（名称からの略号）",
+        "name": "ナックルショット",
+        "attack": "前方へまっすぐパンチ",
+        "strengths": [
+          "通常連打のDPSが高い",
+          "次の攻撃への移行が早い",
+          "パイルバンカーに次ぐリーチという記述"
+        ],
+        "limitations": [
+          "上下方向の攻撃判定が狭い",
+          "ホバー脚の高い位置からでは足元の敵に当たらない場合あり"
+        ],
+        "mechanic_traits": [
+          "継続近接攻撃",
+          "正面",
+          "連打"
+        ],
+        "evidence": [
+          "catalog",
+          "player_article"
+        ],
+        "official_code": "KNUCKLE-SHOT（Wolffang攻略表）",
+        "canonical_name": "ナックルショット",
+        "assertions": {
+          "attack_pattern": "B",
+          "relative_dps": "B",
+          "exact_repeat_delay": "D"
+        },
+        "evidence_kind": "非公式攻略資料の照合／インストカード等による構造確認。AC実機測定未実施",
+        "reported_ac_misspelling": "NUCKLE（ゲームカタログほかの報告。原画面未個別検証）"
+      },
+      {
+        "code": "BS",
+        "name": "ビームソード",
+        "attack": "上段から下段に振り下ろす斬撃",
+        "strengths": [
+          "近接武器中の広い攻撃判定",
+          "発生・連打が速い",
+          "条件付き外周当ての多段ヒット"
+        ],
+        "limitations": [
+          "一撃の威力は比較的小さい",
+          "全方位無条件命中ではない"
+        ],
+        "mechanic_traits": [
+          "広範囲迎撃",
+          "対応範囲",
+          "手数"
+        ],
+        "evidence": [
+          "catalog",
+          "aniwota"
+        ],
+        "official_code": "BEAM-SWORD",
+        "assertions": {
+          "attack_pattern": "B",
+          "low_per_hit_damage": "B",
+          "arc_360_degrees": "C"
+        },
+        "evidence_kind": "非公式攻略資料の照合／インストカード等による構造確認。AC実機測定未実施"
+      },
+      {
+        "code": "IC",
+        "name": "アイアンクロウ",
+        "attack": "前方に向けて低い位置から上方へ爪で掬い上げる。真上は死角。",
+        "strengths": [
+          "下方・前面への判定",
+          "ビームソードより単発ダメージが大きい",
+          "ダッシュキャンセルを併用した高DPS"
+        ],
+        "limitations": [
+          "真上はほとんど攻撃できない",
+          "斬り上げモーションは遅め"
+        ],
+        "mechanic_traits": [
+          "下方迎撃",
+          "範囲制御",
+          "キャンセル操作"
+        ],
+        "evidence": [
+          "catalog",
+          "aniwota"
+        ],
+        "official_code": "IRON-CLAW（Wolffang攻略表）",
+        "assertions": {
+          "attack_pattern": "B",
+          "dash_cancel_dps": "C"
+        },
+        "evidence_kind": "非公式攻略資料の照合／インストカード等による構造確認。AC実機測定未実施",
+        "reported_ac_misspelling": "CRAW（ゲームカタログほかの報告。原画面未個別検証）"
+      },
+      {
+        "code": "PB",
+        "name": "パイルバンカー",
+        "attack": "前方へ杭を直線的に射出",
+        "strengths": [
+          "リーチ最大",
+          "単発威力最大",
+          "持続判定と一撃撃破の有効局面"
+        ],
+        "limitations": [
+          "ほぼ真横中心で上下幅が狭い",
+          "連射性能が低い",
+          "ノックバックで連続ヒットしづらい",
+          "ホバー脚との低高度の相性問題"
+        ],
+        "mechanic_traits": [
+          "単発高威力",
+          "距離管理",
+          "対地"
+        ],
+        "evidence": [
+          "catalog",
+          "aniwota"
+        ],
+        "official_code": "PILE-BUNKER",
+        "assertions": {
+          "attack_pattern": "B",
+          "relative_dps": "B",
+          "reach": "B"
+        },
+        "evidence_kind": "非公式攻略資料の照合／インストカード等による構造確認。AC実機測定未実施"
+      }
+    ],
+    "LEG": [
+      {
+        "code": "2L",
+        "name": "2脚滑走",
+        "attack": "走行・ジャンプ・踏みつけ",
+        "mobility": "通常移動は速め。ジャンプはホバー/4脚より低く、6輪より高い。",
+        "troopers": 2,
+        "strengths": [
+          "機動性のバランス",
+          "移動とジャンプの両立"
+        ],
+        "limitations": [
+          "搭乗猟兵2名",
+          "背丈の低さは6輪に劣る"
+        ],
+        "mechanic_traits": [
+          "汎用移動",
+          "中庸",
+          "対応力"
+        ],
+        "evidence": [
+          "parts_table",
+          "catalog"
+        ],
+        "official_code": "2LEGS",
+        "assertions": {
+          "movement_and_jump": "B",
+          "trooper_limit": "B"
+        },
+        "evidence_kind": "非公式攻略資料の照合／インストカード等による構造確認。AC実機測定未実施"
+      },
+      {
+        "code": "2H",
+        "name": "2脚ホバー",
+        "attack": "地表から浮いた移動・ジャンプ",
+        "mobility": "移動遅め／ジャンプ高め",
+        "troopers": 2,
+        "strengths": [
+          "地雷を避けやすい",
+          "ジャンプ中の当たり判定が小さい"
+        ],
+        "limitations": [
+          "通常姿勢の当たり判定が大きい",
+          "背が高く、低い地上目標に一部ARMが当たらない"
+        ],
+        "mechanic_traits": [
+          "高度確保",
+          "地雷回避",
+          "縦方向"
+        ],
+        "evidence": [
+          "catalog",
+          "aniwota"
+        ],
+        "official_code": "HOVER",
+        "assertions": {
+          "movement_and_jump": "B",
+          "mine_advantage": "B",
+          "jump_hitbox": "C",
+          "trooper_limit": "B"
+        },
+        "evidence_kind": "非公式攻略資料の照合／インストカード等による構造確認。AC実機測定未実施"
+      },
+      {
+        "code": "4L",
+        "name": "4脚走行",
+        "attack": "地上移動・ジャンプ・踏みつけ",
+        "mobility": "移動最遅／ジャンプ最高",
+        "troopers": 4,
+        "strengths": [
+          "最高ジャンプ性能",
+          "最大4人の猟兵",
+          "見た目の大きさに反して被弾判定は限定的という攻略解説"
+        ],
+        "limitations": [
+          "移動は最遅",
+          "水中などジャンプが活きない面で不利"
+        ],
+        "mechanic_traits": [
+          "高所機動",
+          "随伴支援",
+          "ジャンプ重視"
+        ],
+        "evidence": [
+          "catalog",
+          "aniwota"
+        ],
+        "official_code": "4LEGS",
+        "assertions": {
+          "movement_and_jump": "B",
+          "trooper_limit": "B",
+          "stomp_damage_superiority": "C"
+        },
+        "evidence_kind": "非公式攻略資料の照合／インストカード等による構造確認。AC実機測定未実施"
+      },
+      {
+        "code": "6W",
+        "name": "6輪操舵",
+        "attack": "高速地上走行・低姿勢移動",
+        "mobility": "移動最速／ジャンプ最低",
+        "troopers": 4,
+        "strengths": [
+          "通常移動が最速",
+          "全高が低い",
+          "最大4人の猟兵"
+        ],
+        "limitations": [
+          "ジャンプ性能は最低",
+          "前後方向は判定が広いという攻略解説",
+          "ダッシュタックルの速度・威力が最速とは言い切れない"
+        ],
+        "mechanic_traits": [
+          "速度",
+          "低姿勢",
+          "随伴支援"
+        ],
+        "evidence": [
+          "catalog",
+          "aniwota"
+        ],
+        "official_code": "6WHEELS",
+        "assertions": {
+          "movement_and_jump": "B",
+          "trooper_limit": "B",
+          "tackle_damage": "D"
+        },
+        "evidence_kind": "非公式攻略資料の照合／インストカード等による構造確認。AC実機測定未実施"
+      }
+    ],
+    "SHOT": [
+      {
+        "code": "V",
+        "name": "バルカンキャノン",
+        "attack": "扇状の拡散弾",
+        "level_changes": [
+          "3方向",
+          "5方向",
+          "7方向"
+        ],
+        "strengths": [
+          "広範囲の雑魚処理",
+          "迎撃",
+          "近距離で弾をまとめると火力上昇"
+        ],
+        "limitations": [
+          "遠距離の単体への火力は弱め"
+        ],
+        "mechanic_traits": [
+          "面制圧",
+          "通常戦"
+        ],
+        "evidence": [
+          "catalog",
+          "aniwota"
+        ],
+        "official_code": "V",
+        "assertions": {
+          "spread": "B",
+          "shot_count": "B"
+        },
+        "evidence_kind": "非公式攻略資料の照合／インストカード等による構造確認。AC実機測定未実施"
+      },
+      {
+        "code": "C",
+        "name": "クラスターガン",
+        "attack": "回転する弾群を射出",
+        "level_changes": [
+          "2発単位",
+          "4発単位",
+          "6発単位"
+        ],
+        "strengths": [
+          "攻撃範囲と火力の両立"
+        ],
+        "limitations": [
+          "弾群速度が低い",
+          "画面内の発射弾群に上限がある",
+          "無計画な連射では弾切れを起こす"
+        ],
+        "mechanic_traits": [
+          "弾数管理",
+          "中距離",
+          "万能型"
+        ],
+        "evidence": [
+          "catalog",
+          "player_article"
+        ],
+        "official_code": "C",
+        "assertions": {
+          "trajectory": "B",
+          "level_bullet_count": "C"
+        },
+        "evidence_kind": "非公式攻略資料の照合／インストカード等による構造確認。AC実機測定未実施"
+      },
+      {
+        "code": "G",
+        "name": "グレネードガン",
+        "attack": "横か斜め45度上へ直線発射し、敵に当たると持続する爆炎が発生。BODYグレネードランチャーとは別武装。",
+        "level_changes": [
+          "1連射",
+          "2連射",
+          "3連射"
+        ],
+        "strengths": [
+          "高火力",
+          "爆風が一部敵弾を消去",
+          "大型敵向け"
+        ],
+        "limitations": [
+          "爆風存続中の連射制限",
+          "雑魚の多方向出現に弱い"
+        ],
+        "mechanic_traits": [
+          "重点攻撃",
+          "爆風迎撃"
+        ],
+        "evidence": [
+          "catalog",
+          "aniwota"
+        ],
+        "official_code": "G",
+        "assertions": {
+          "trajectory": "B",
+          "explosion_damage_and_bullet_cancel": "B",
+          "repeat_limit": "B"
+        },
+        "evidence_kind": "非公式攻略資料の照合／インストカード等による構造確認。AC実機測定未実施"
+      },
+      {
+        "code": "L",
+        "name": "レーザーライフル",
+        "attack": "前方か斜め45度上への継続的な貫通レーザー",
+        "level_changes": [
+          "細",
+          "中",
+          "太"
+        ],
+        "strengths": [
+          "最大級の継続火力",
+          "貫通",
+          "一部ボスを速攻可能"
+        ],
+        "limitations": [
+          "正面と上45度の射線以外に死角",
+          "照射直後から最大火力とは限らない",
+          "近接武装が自動発動するとレーザー照射が中断される"
+        ],
+        "mechanic_traits": [
+          "一点集中",
+          "射線維持"
+        ],
+        "evidence": [
+          "catalog",
+          "tactics",
+          "player_article"
+        ],
+        "official_code": "L",
+        "assertions": {
+          "penetration": "B",
+          "angle": "B",
+          "ramp_up_delay": "B"
+        },
+        "evidence_kind": "非公式攻略資料の照合／インストカード等による構造確認。AC実機測定未実施"
+      }
+    ]
+  },
+  "machines": [
+    {
+      "type_no": 1,
+      "name": "蒼龍",
+      "body": "HM",
+      "arm": "KS",
+      "leg": "2L"
+    },
+    {
+      "type_no": 2,
+      "name": "天雷",
+      "body": "EL",
+      "arm": "BS",
+      "leg": "2H"
+    },
+    {
+      "type_no": 3,
+      "name": "火龍",
+      "body": "FL",
+      "arm": "IC",
+      "leg": "4L"
+    },
+    {
+      "type_no": 4,
+      "name": "神龍",
+      "body": "GL",
+      "arm": "PB",
+      "leg": "6W"
+    },
+    {
+      "type_no": 5,
+      "name": "虎徹",
+      "body": "HM",
+      "arm": "BS",
+      "leg": "2L"
+    },
+    {
+      "type_no": 6,
+      "name": "白虎",
+      "body": "HM",
+      "arm": "IC",
+      "leg": "2L"
+    },
+    {
+      "type_no": 7,
+      "name": "仁王",
+      "body": "HM",
+      "arm": "PB",
+      "leg": "2L"
+    },
+    {
+      "type_no": 8,
+      "name": "陣風",
+      "body": "HM",
+      "arm": "KS",
+      "leg": "2H"
+    },
+    {
+      "type_no": 9,
+      "name": "雪風",
+      "body": "HM",
+      "arm": "BS",
+      "leg": "2H"
+    },
+    {
+      "type_no": 10,
+      "name": "疾風",
+      "body": "HM",
+      "arm": "IC",
+      "leg": "2H"
+    },
+    {
+      "type_no": 11,
+      "name": "烈風",
+      "body": "HM",
+      "arm": "PB",
+      "leg": "2H"
+    },
+    {
+      "type_no": 12,
+      "name": "黒龍",
+      "body": "HM",
+      "arm": "KS",
+      "leg": "4L"
+    },
+    {
+      "type_no": 13,
+      "name": "牙竜",
+      "body": "HM",
+      "arm": "BS",
+      "leg": "4L"
+    },
+    {
+      "type_no": 14,
+      "name": "鵺",
+      "body": "HM",
+      "arm": "IC",
+      "leg": "4L"
+    },
+    {
+      "type_no": 15,
+      "name": "白龍",
+      "body": "HM",
+      "arm": "PB",
+      "leg": "4L"
+    },
+    {
+      "type_no": 16,
+      "name": "蛟",
+      "body": "HM",
+      "arm": "KS",
+      "leg": "6W"
+    },
+    {
+      "type_no": 17,
+      "name": "閃光",
+      "body": "HM",
+      "arm": "BS",
+      "leg": "6W"
+    },
+    {
+      "type_no": 18,
+      "name": "屠龍",
+      "body": "HM",
+      "arm": "IC",
+      "leg": "6W"
+    },
+    {
+      "type_no": 19,
+      "name": "地龍",
+      "body": "HM",
+      "arm": "PB",
+      "leg": "6W"
+    },
+    {
+      "type_no": 20,
+      "name": "隼",
+      "body": "GL",
+      "arm": "KS",
+      "leg": "2L"
+    },
+    {
+      "type_no": 21,
+      "name": "剣",
+      "body": "GL",
+      "arm": "BS",
+      "leg": "2L"
+    },
+    {
+      "type_no": 22,
+      "name": "王牙",
+      "body": "GL",
+      "arm": "IC",
+      "leg": "2L"
+    },
+    {
+      "type_no": 23,
+      "name": "隼鷹",
+      "body": "GL",
+      "arm": "PB",
+      "leg": "2L"
+    },
+    {
+      "type_no": 24,
+      "name": "迦楼羅",
+      "body": "GL",
+      "arm": "KS",
+      "leg": "2H"
+    },
+    {
+      "type_no": 25,
+      "name": "吹雪",
+      "body": "GL",
+      "arm": "IC",
+      "leg": "2H"
+    },
+    {
+      "type_no": 26,
+      "name": "鳳凰",
+      "body": "GL",
+      "arm": "PB",
+      "leg": "2H"
+    },
+    {
+      "type_no": 27,
+      "name": "不動",
+      "body": "GL",
+      "arm": "KS",
+      "leg": "4L"
+    },
+    {
+      "type_no": 28,
+      "name": "玄武",
+      "body": "GL",
+      "arm": "BS",
+      "leg": "4L"
+    },
+    {
+      "type_no": 29,
+      "name": "蔵王",
+      "body": "GL",
+      "arm": "IC",
+      "leg": "4L"
+    },
+    {
+      "type_no": 30,
+      "name": "夜叉",
+      "body": "GL",
+      "arm": "PB",
+      "leg": "4L"
+    },
+    {
+      "type_no": 31,
+      "name": "護法",
+      "body": "GL",
+      "arm": "KS",
+      "leg": "6W"
+    },
+    {
+      "type_no": 32,
+      "name": "猿猴",
+      "body": "GL",
+      "arm": "BS",
+      "leg": "6W"
+    },
+    {
+      "type_no": 33,
+      "name": "羅刹",
+      "body": "GL",
+      "arm": "IC",
+      "leg": "6W"
+    },
+    {
+      "type_no": 34,
+      "name": "電光",
+      "body": "EL",
+      "arm": "PB",
+      "leg": "6W"
+    },
+    {
+      "type_no": 35,
+      "name": "阿修羅",
+      "body": "FL",
+      "arm": "KS",
+      "leg": "2L"
+    },
+    {
+      "type_no": 36,
+      "name": "閻魔",
+      "body": "FL",
+      "arm": "BS",
+      "leg": "2L"
+    },
+    {
+      "type_no": 37,
+      "name": "金剛",
+      "body": "FL",
+      "arm": "IC",
+      "leg": "2L"
+    },
+    {
+      "type_no": 38,
+      "name": "甲龍",
+      "body": "FL",
+      "arm": "PB",
+      "leg": "2L"
+    },
+    {
+      "type_no": 39,
+      "name": "朱雀",
+      "body": "FL",
+      "arm": "KS",
+      "leg": "2H"
+    },
+    {
+      "type_no": 40,
+      "name": "荒神",
+      "body": "FL",
+      "arm": "BS",
+      "leg": "2H"
+    },
+    {
+      "type_no": 41,
+      "name": "飛龍",
+      "body": "FL",
+      "arm": "IC",
+      "leg": "2H"
+    },
+    {
+      "type_no": 42,
+      "name": "飛燕",
+      "body": "FL",
+      "arm": "PB",
+      "leg": "2H"
+    },
+    {
+      "type_no": 43,
+      "name": "土蜘蛛",
+      "body": "FL",
+      "arm": "KS",
+      "leg": "4L"
+    },
+    {
+      "type_no": 44,
+      "name": "赤龍",
+      "body": "FL",
+      "arm": "BS",
+      "leg": "4L"
+    },
+    {
+      "type_no": 45,
+      "name": "龍王",
+      "body": "FL",
+      "arm": "PB",
+      "leg": "4L"
+    },
+    {
+      "type_no": 46,
+      "name": "光焔",
+      "body": "FL",
+      "arm": "KS",
+      "leg": "6W"
+    },
+    {
+      "type_no": 47,
+      "name": "不知火",
+      "body": "FL",
+      "arm": "BS",
+      "leg": "6W"
+    },
+    {
+      "type_no": 48,
+      "name": "叢雲",
+      "body": "FL",
+      "arm": "IC",
+      "leg": "6W"
+    },
+    {
+      "type_no": 49,
+      "name": "大蛇",
+      "body": "FL",
+      "arm": "PB",
+      "leg": "6W"
+    },
+    {
+      "type_no": 50,
+      "name": "閃電",
+      "body": "EL",
+      "arm": "KS",
+      "leg": "2L"
+    },
+    {
+      "type_no": 51,
+      "name": "紫電",
+      "body": "EL",
+      "arm": "BS",
+      "leg": "2L"
+    },
+    {
+      "type_no": 52,
+      "name": "震電",
+      "body": "EL",
+      "arm": "IC",
+      "leg": "2L"
+    },
+    {
+      "type_no": 53,
+      "name": "雷火",
+      "body": "EL",
+      "arm": "PB",
+      "leg": "2L"
+    },
+    {
+      "type_no": 54,
+      "name": "彗星",
+      "body": "EL",
+      "arm": "KS",
+      "leg": "2H"
+    },
+    {
+      "type_no": 55,
+      "name": "応竜",
+      "body": "GL",
+      "arm": "BS",
+      "leg": "2H"
+    },
+    {
+      "type_no": 56,
+      "name": "空電",
+      "body": "EL",
+      "arm": "IC",
+      "leg": "2H"
+    },
+    {
+      "type_no": 57,
+      "name": "流星",
+      "body": "EL",
+      "arm": "PB",
+      "leg": "2H"
+    },
+    {
+      "type_no": 58,
+      "name": "電龍",
+      "body": "EL",
+      "arm": "KS",
+      "leg": "4L"
+    },
+    {
+      "type_no": 59,
+      "name": "麒麟",
+      "body": "EL",
+      "arm": "BS",
+      "leg": "4L"
+    },
+    {
+      "type_no": 60,
+      "name": "雷獣",
+      "body": "EL",
+      "arm": "IC",
+      "leg": "4L"
+    },
+    {
+      "type_no": 61,
+      "name": "雷神",
+      "body": "EL",
+      "arm": "PB",
+      "leg": "4L"
+    },
+    {
+      "type_no": 62,
+      "name": "青龍",
+      "body": "EL",
+      "arm": "KS",
+      "leg": "6W"
+    },
+    {
+      "type_no": 63,
+      "name": "月光",
+      "body": "EL",
+      "arm": "BS",
+      "leg": "6W"
+    },
+    {
+      "type_no": 64,
+      "name": "武光",
+      "body": "EL",
+      "arm": "IC",
+      "leg": "6W"
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "U01",
+      "item": "BODYチャージ速度最速の比較",
+      "conflict": "ゲームカタログ＝EL→HM→FL→GL（速い順）。アニヲタWiki・回顧記事＝HMが最速。",
+      "status": "ELとHMの速度序列は保留。FL/GL遅め、GL最遅は複数資料が一致。",
+      "needed": "AC同条件実機・録画フレーム測定"
+    },
+    {
+      "id": "U02",
+      "item": "ダッシュタックルの威力と脚部",
+      "conflict": "ゲームカタログ＝タックルダメージはパーツ無関係で固定。アニヲタWiki＝6輪のタックルが最高威力。",
+      "status": "脚部によるタックル威力変化は保留。通常移動最速が6輪とは区別。",
+      "needed": "ACで同一敵を脚部別に比較"
+    },
+    {
+      "id": "U03",
+      "item": "ウェポンチェンジアイテム消滅条件",
+      "conflict": "ゲームカタログ・回顧記事＝4ループで爆発、アニヲタWiki＝3周で自壊。",
+      "status": "診断の構成要素ではないため保留。",
+      "needed": "AC実機による回数測定"
+    },
+    {
+      "id": "U04",
+      "item": "正確な攻撃倍率・フレーム・射程",
+      "conflict": "基礎資料は多くが定性的。値を比較した実測表は未取得。",
+      "status": "強弱の数値点を捏造しない。",
+      "needed": "条件固定のACフレーム検証"
+    },
+    {
+      "id": "U05",
+      "item": "ARM略号の表記",
+      "conflict": "機体一覧のナックル略号 KS と本文公式表記とする NS が一致しない。",
+      "status": "機体マッピングはKSのまま保存。パーツ本体の識別子はNSを使用、別名KSを持つ。",
+      "needed": "日本語AC選択画面・インストカードの目視確認"
+    },
+    {
+      "id": "U06",
+      "item": "ARMの「再攻撃最速」順位",
+      "conflict": "攻略回顧録にはナックル／ビームソード両方を「最も短い」とする箇所があり、文章だけでは厳密順位が一意でない。",
+      "status": "最速断定を避け、実効DPSと攻撃モーションを分けて扱う。",
+      "needed": "入力間隔を固定したAC録画の比較"
+    },
+    {
+      "id": "U07",
+      "item": "地表に落ちたGL火柱の対単体火力",
+      "conflict": "アニヲタWikiは「地上着弾時の爆炎の方が高威力」とするが、同条件の実測値は未取得。",
+      "status": "地表炎が攻撃判定を持つことは採用、直撃とのダメージ大小は保留。",
+      "needed": "同一敵への直撃と地表炎の比較"
+    },
+    {
+      "id": "U08",
+      "item": "FLの3/5/7発の対象物",
+      "conflict": "パーツ表は「3/5/7発」と記載。上空装置・火炎弾・降下判定のどれを厳密に数えているか未確認。",
+      "status": "段階別表記値として保存。雨の粒数やヒット数として断定しない。",
+      "needed": "AC発動時の高フレーム録画"
+    },
+    {
+      "id": "U09",
+      "item": "4脚の踏みつけ威力とその他脚部差",
+      "conflict": "一つの攻略解説では4脚が最大威力と記述するが、定量測定と独立再確認は未実施。",
+      "status": "脚部の優劣点数へ定量化しない。",
+      "needed": "同じ敵への同一高さ・速度での踏みつけ比較"
+    },
+    {
+      "id": "U10",
+      "item": "SHOTのパワーアップ段階と初期強化状態",
+      "conflict": "攻略資料はVの3/5/7WAYなど明記。開始時装備の初期レベルや強化段階の数え方は混同されやすい。",
+      "status": "表示は初期→強化1→強化2として扱い、通算取得個数と同一視しない。",
+      "needed": "AC初期状態からの連続アイテム取得"
+    },
+    {
+      "id": "U11",
+      "item": "銃撃自動切替の距離と範囲の定量",
+      "conflict": "ARMによる置換が起こることは整合するが、距離と敵の判定形状は実測していない。",
+      "status": "武器別に閾値を数値化しない。レーザーとの相性は定性的に扱う。",
+      "needed": "同一敵、同一位置での攻撃置換範囲測定"
+    },
+    {
+      "id": "U12",
+      "item": "6輪タックル威力と通常移動速度の混同",
+      "conflict": "6輪は通常移動最速。一方、攻略資料にはダッシュ全脚共通と6輪タックル最大威力の両記述。",
+      "status": "通常移動・ダッシュ速度・タックル威力を別フィールドで管理。",
+      "needed": "AC脚部別で同条件のダッシュ・タックル実測"
+    },
+    {
+      "id": "U13",
+      "item": "機体名の漢字表記の揺れ",
+      "conflict": "2007年の機体表には「牙竜」「迦楼羅」「応竜」、別の二次Wikiには「牙龍」「迦桜羅」「応龍」などの異表記がある。",
+      "status": "TYPE-名前-構成の基準表は2007年機体リストに統一。異表記を同一名称とは断定せず注記。",
+      "needed": "国内ACの機体構築画面を各TYPEで目視照合"
+    }
+  ],
+  "shared_mechanics": [
+    "近接範囲に敵がいるとショットからARMへ自動切替。独立したARMボタンはない。",
+    "ARM攻撃は手動連打が有効。近接攻撃中にダッシュを入力するとキャンセルできる。",
+    "通常ショットは横と上45度。下方や真上は武器による補完が必要。",
+    "サブ武器は時間チャージ最大3段階。発動でゲージ消費。",
+    "LEGには歩行、跳躍、当たり判定、猟兵搭乗数の差がある。",
+    "メインショットは拾ったアイテムで変更。BODY装備のグレネードランチャーとメインのグレネードガンは別装備。",
+    "猟兵は搭乗数上限が脚部に依存。自動支援射撃し、被弾時に失う。",
+    "一部ARMと高いホバー脚との組み合わせで低い地上目標が死角になる。",
+    "レーザーは近接自動切替で途切れるため接近戦用のARM構成と相互作用する。",
+    "ダッシュ速度・威力と通常移動の強さは分ける。"
+  ],
+  "future_diagnostic_rules": [
+    "過去の本人好み機体・パーツ好み、AIの旧判定・順位を参照しない。",
+    "プレイヤー操作の好みを問う診断と、人物の行動特性を比喩にする診断を別スコアとして扱う。",
+    "名称、外見、強そうな響きは説明変数に入れない（鑑賞嗜好診断なら明示）。",
+    "BODY、ARM、LEGについて独立に入力・採点し、組み合わせの相性・死角を別に検査。",
+    "速度・火力・耐久など資料未確定の数値は導入しない。",
+    "全64機を漏れなく候補にし、スコアは先に公開したルールで再現可能にする。",
+    "メインショットはAC機体の固定決定パーツでないため参考として別判定。",
+    "結果には各部位の適合根拠と弱点、次点機体、判断を覆す条件を示す。"
+  ],
+  "evidence_policy": {
+    "A": "公式カード・取説・製品情報等の一次資料で直接確認",
+    "B": "複数の独立する攻略・研究資料で整合する定性的説明",
+    "C": "一つの二次資料のみで具体的に記載（要追試）",
+    "D": "資料間に矛盾があり未確定",
+    "note": "この作業では実機フレーム測定・ダメージ数値の独立計測は行っていない。以下の評価は資料上の裏付けを表す。"
+  },
+  "machine_schema_notes": {
+    "type_no": "ゲーム内TYPE番号を整数で記載。JSON内部では既存の整数型を維持。",
+    "arm": "KSは2007年機体リストの略号。装備オブジェクトのNSに正規化するため machine_arm_to_canonical={KS:NS} を使用。",
+    "shot": "固定64機体の構成パラメータではなく、可変の戦闘中装備。",
+    "build": "64件は機体一覧から転記している。名称と組み合わせは一つの攻略Wikiを主とし、実機の全64独立視認検証は行っていない。"
+  },
+  "machine_arm_to_canonical": {
+    "KS": "NS",
+    "BS": "BS",
+    "IC": "IC",
+    "PB": "PB"
+  },
+  "interactions": [
+    {
+      "parts": [
+        "ARM:NS",
+        "LEG:2H"
+      ],
+      "effect": "脚部が高く、密着時に低い地上敵へ拳が当たらない場合",
+      "status": "B"
+    },
+    {
+      "parts": [
+        "ARM:PB",
+        "LEG:2H"
+      ],
+      "effect": "脚部が高く、上下判定の狭い杭が低い目標へ当たらない場合",
+      "status": "B"
+    },
+    {
+      "parts": [
+        "SHOT:L",
+        "ARM:any"
+      ],
+      "effect": "敵が近接判定に入りARMへ自動切替するとレーザーが中断",
+      "status": "B"
+    },
+    {
+      "parts": [
+        "ARM:IC",
+        "ACTION:dash_cancel"
+      ],
+      "effect": "ダッシュキャンセル技で高DPSが可能とする攻略記述",
+      "status": "C"
+    },
+    {
+      "parts": [
+        "ARM:BS",
+        "ACTION:edge_hit"
+      ],
+      "effect": "外周当て多段ヒットが可能とする攻略記述",
+      "status": "C"
+    },
+    {
+      "parts": [
+        "LEG:4L or 6W",
+        "TROOPER:4"
+      ],
+      "effect": "搭乗猟兵4人まで。2脚/ホバーの2人より支援射撃が厚い",
+      "status": "B"
+    },
+    {
+      "parts": [
+        "SHOT:G",
+        "BODY:GL"
+      ],
+      "effect": "グレネード名称は似るが射線と着弾挙動が異なる別武器",
+      "status": "B"
+    },
+    {
+      "parts": [
+        "BODY:FL",
+        "STAGE:vertical_position"
+      ],
+      "effect": "頭上展開までに時間差。出現位置を読んで発動する",
+      "status": "B"
+    },
+    {
+      "parts": [
+        "BODY:GL",
+        "STAGE:surface"
+      ],
+      "effect": "地面着弾では火柱。高空への攻撃は地面からでは届きにくい",
+      "status": "B"
+    },
+    {
+      "parts": [
+        "SHOT:C",
+        "ACTION:manual_fire"
+      ],
+      "effect": "画面内の弾群数上限により手連射の扱いが難しい",
+      "status": "B"
+    }
+  ],
+  "diagnosis_constraints": {
+    "exclude_user_prefs": "本人が後日その診断で入力した場合を除き過去の嗜好・旧判定は不使用",
+    "personality_vs_gameplay": "実際の操作性能と性格的な比喩を別モジュールに分け、独断の因果に変えない",
+    "scoring": "定性的な軸は最初に定義し、64機体を同一規則で網羅的評価",
+    "unverified": "DとCのデータを絶対スコアや隠れた加点減点にしない",
+    "shot": "可変なので固定機体評価には入れない。併用武器として任意の別軸にする",
+    "source_details": "診断に採用した装備根拠、反証、弱点、次点と逆転条件を表示"
+  }
+}
